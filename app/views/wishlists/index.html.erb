@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>WISHLIST</h1>
+
+<div id="todo_lists">
+  <% @wishlists.each do |wishlist| %>
+    <%= render wishlist %>
+    <p>
+      <%= link_to "View Wish", wishlist %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New Wish", new_wishlist_path %>

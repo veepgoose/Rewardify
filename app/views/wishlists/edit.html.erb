@@ -1,0 +1,10 @@
+<h1>WISH EDITOR</h1>
+
+<%= render "form", wishlist: @wishlist %>
+
+<br>
+
+<div>
+  <%= link_to "View this Wish", @wishlist %> |
+  <%= link_to "Return to Wishlist", wishlist_path %>
+</div>
