@@ -2,6 +2,17 @@
 
 <h1>WISHLIST</h1>
 
+<h1>Wishlist Items</h1>
+
+<%= render 'search_form' %>
+
+<ul>
+  <% @wishlists.each do |wishlist| %>
+    <li><%= wishlist.name %></li>
+  <% end %>
+</ul>
+
+
 <div id="todo_lists">
   <% @wishlists.each do |wishlist| %>
     <%= render wishlist %>

@@ -3,7 +3,8 @@ class WishlistsController < ApplicationController
 
   # GET /wishlists or /wishlists.json
   def index
-    @wishlists = Wishlist.all
+    @q = Wishlist.ransack(params[:q])
+    @wishlists = @q.result(distinct:true)
   end
 
   # GET /wishlists/1 or /wishlists/1.json
